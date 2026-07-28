@@ -45,6 +45,8 @@ import {
   RefreshCw,
   LogOut,
   ShieldCheck,
+  CloudUpload,
+  Database,
 } from 'lucide-react';
 
 export default function App() {
@@ -134,10 +136,11 @@ export default function App() {
     };
   }, [currentUser]);
 
-  // Sync to Cloud whenever state changes
+  // Sync to Cloud & Database automatically whenever state changes
   useEffect(() => {
-    if (currentUser?.username && !isLoadingCloud) {
-      syncAllDataToCloud(currentUser.username, {
+    if (!isLoadingCloud) {
+      const activeUser = currentUser?.username || activeAccount?.name || 'default_butcher';
+      syncAllDataToCloud(activeUser, {
         accounts,
         items,
         segments,
@@ -145,7 +148,7 @@ export default function App() {
         lossConfig,
       });
     }
-  }, [accounts, items, segments, reports, lossConfig, currentUser, isLoadingCloud]);
+  }, [accounts, items, segments, reports, lossConfig, currentUser, activeAccount, isLoadingCloud]);
 
   // Auth Handlers
   const handleLoginSuccess = (username: string, email?: string) => {
@@ -563,7 +566,7 @@ export default function App() {
       )}
 
       {/* --- MAIN CONTENT STAGE AREA --- */}
-      <main className="flex-1 p-4 md:p-8 overflow-y-auto max-w-7xl mx-auto w-full">
+      <main className="flex-1 p-4 md:p-8 overflow-y-auto max-w-7xl mx-auto w-full space-y-6">
         {activeTab === 'dashboard' && (
           <Dashboard
             activeAccount={activeAccount}
@@ -630,4 +633,3 @@ export default function App() {
     </div>
   );
 }
-
