@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@media print {
+
+  body * {
+    visibility: hidden;
+  }
+
+  #pdf-report-canvas,
+  #pdf-report-canvas * {
+    visibility: visible;
+  }
+
+  #pdf-report-canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
