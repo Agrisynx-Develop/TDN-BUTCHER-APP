@@ -11,11 +11,11 @@ interface DashboardProps {
 }
 
 const COMMON_MEATS = [
-  { name: 'Sapi Wagyu Ribeye', plan: 'Potong Steak @200g & Fat Trim', pricePerKg: 350000, icon: '🥩' },
-  { name: 'Daging Sirloin Australia', plan: 'Irisan Tipis (Slice) @500g Pack', pricePerKg: 185000, icon: '🥓' },
-  { name: 'Sapi Tenderloin Lokal', plan: 'Potong Steak Tebal @250g', pricePerKg: 280000, icon: '🍖' },
-  { name: 'Daging Sandung Lamur (Brisket)', plan: 'Blok Asap (Smoked) @2Kg', pricePerKg: 125000, icon: '🍗' },
-  { name: 'Sapi Shortplate Slice', plan: 'Kemasan Shabu @250g', pricePerKg: 140000, icon: '🥩' },
+  { name: 'PUL(Minerva)', plan: 'Premium', icon: '🥩' },
+  { name: 'FRIBOI', plan: 'Rendang Shank', icon: '🥓' },
+  { name: 'FRIGOL', plan: 'Rendang Fresh', icon: '🍖' },
+  { name: 'Bahan Daging Giling', plan: 'Daging Giling', icon: '🍗' },
+  { name: 'HQ', plan: 'Premium', icon: '🥩' },
 ];
 
 export default function Dashboard({
