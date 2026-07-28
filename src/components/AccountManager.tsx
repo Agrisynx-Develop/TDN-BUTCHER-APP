@@ -166,9 +166,11 @@ export default function AccountManager({
             </form>
           </div>
 
-          <p className="text-[10px] text-slate-400 mt-6 leading-relaxed">
-            💡 <em>Profil ini disimpan aman dalam basis data lokal browser, sehingga saat halaman di-refresh, daftar nama butcher dan riwayat pekerjaannya tetap aman tersimpan.</em>
-          </p>
+          <div className="mt-6 pt-4 border-t border-slate-100">
+            <p className="text-[11px] text-slate-500 leading-relaxed text-center font-medium">
+              ✨ <em>Data penimbangan, pabrikasi, dan profil butcher otomatis tersimpan langsung secara real-time ke database. Saat Anda login kembali atau ganti perangkat, data tetap tersimpan aman.</em>
+            </p>
+          </div>
         </div>
       </div>
     </div>
